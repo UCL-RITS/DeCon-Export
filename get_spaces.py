@@ -3,6 +3,10 @@ import json
 import time
 import os
 
+"""
+Dumps a spaces.json file containing info about all the Confluence spaces you can see on the target server.
+"""
+
 hostname="wiki.ucl.ac.uk"
 
 url = f"https://{hostname}/rest/api/space"

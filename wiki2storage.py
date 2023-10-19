@@ -1,3 +1,7 @@
+"""
+A quick script for running text through Confluence's conversion API end-point.
+"""
+
 import requests
 import json
 import time

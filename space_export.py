@@ -1,3 +1,9 @@
+"""
+This is intended to work on a Confluence Space export, converting the contents into Markdown files.
+
+Format and title conversion remains a problem.
+"""
+
 import xml.etree.ElementTree
 
 from dataclasses import dataclass
@@ -7,6 +13,7 @@ import urllib.parse
 enc = urllib.parse.quote_plus
 
 import yaml
+import pypandoc
 
 # The path to the unzipped Confluence space export
 # This should probably be a path object instead or something
@@ -145,6 +152,7 @@ def cap_first(s):
     return s[0].upper() + s[1:]
 
 
+# Yes, yes, this is a horrible textual crime.
 def safe_title(t):
     ratio_character = "∶"
     fullwidth_solidus = "／"
